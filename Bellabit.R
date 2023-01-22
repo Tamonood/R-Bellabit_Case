@@ -7,6 +7,7 @@ install.packages("ggplot2")
 install.packages("readr")
 install.packages("forcats")
 install.packages("lubridate")
+install.packages("tinytex")
 library(tidyverse)
 library(janitor)
 library(dplyr)
@@ -14,6 +15,7 @@ library(ggplot2)
 library(readr)
 library(forcats)
 library(lubridate)
+library(tinytex)
 
 ##PROCESS
 

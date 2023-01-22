@@ -1,6 +1,9 @@
 ---
 title: "Bellabit_Report"
-output: html_document
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
 date: "2023-01-19"
 ---
 # Case Brief
@@ -41,6 +44,7 @@ library(ggplot2)
 library(readr)
 library(forcats)
 library(lubridate)
+library(tinytex)
 ```
 
 Import datasets

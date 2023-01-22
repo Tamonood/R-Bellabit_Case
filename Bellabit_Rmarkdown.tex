@@ -1,0 +1,588 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Bellabit\_Report},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Bellabit\_Report}
+\author{}
+\date{\vspace{-2.5em}2023-01-19}
+
+\begin{document}
+\maketitle
+
+\hypertarget{case-brief}{%
+\section{Case Brief}\label{case-brief}}
+
+\hypertarget{bellabit--case-study}{%
+\subsection{Bellabit- case Study}\label{bellabit--case-study}}
+
+Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that
+manufactures health-focused smart products.
+
+\hypertarget{ask}{%
+\subsubsection{Ask}\label{ask}}
+
+Sršen asks to analyze smart device usage data in order to gain insight
+into how consumers use non-Bellabeat smart devices. She then wants you
+to select one Bellabeat product to apply these insights to in your
+presentation.
+
+Case Study Roadmap -
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  What are some trends in smart device usage?
+\item
+  How could these trends apply to Bellabeat customers?
+\item
+  How could these trends help influence Bellabeat marketing strategy?
+\end{enumerate}
+
+\hypertarget{prepare}{%
+\subsubsection{Prepare}\label{prepare}}
+
+Importing 2 three datasets:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  dailyActivity\_merged
+\item
+  sleepDay\_merged
+\end{enumerate}
+
+\hypertarget{process}{%
+\subsubsection{Process}\label{process}}
+
+Install packages and Load Libraries
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.2 --
+## v ggplot2 3.4.0      v purrr   1.0.1 
+## v tibble  3.1.8      v dplyr   1.0.10
+## v tidyr   1.2.1      v stringr 1.4.1 
+## v readr   2.1.3      v forcats 0.5.2 
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(janitor)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'janitor'
+## 
+## The following objects are masked from 'package:stats':
+## 
+##     chisq.test, fisher.test
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(readr)}
+\FunctionTok{library}\NormalTok{(forcats)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: timechange
+## 
+## Attaching package: 'lubridate'
+## 
+## The following objects are masked from 'package:base':
+## 
+##     date, intersect, setdiff, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tinytex)}
+\end{Highlighting}
+\end{Shaded}
+
+Import datasets
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_activity }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"C:/Users/tamon/Desktop/Google Analytics Course/Case Study/Dataset/dailyActivity\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 940 Columns: 15
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (1): ActivityDate
+## dbl (14): Id, TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDi...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sleep\_day }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"C:/Users/tamon/Desktop/Google Analytics Course/Case Study/Dataset/sleepDay\_merged.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 413 Columns: 5
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (1): SleepDay
+## dbl (4): Id, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Cleaning \& Formatting}
+\NormalTok{daily\_activity }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{duplicated}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{sum}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{duplicated}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{sum}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Remove duplicate rows}
+\NormalTok{sleep\_day }\OtherTok{\textless{}{-}}\NormalTok{ sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{distinct}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{drop\_na}\NormalTok{()}
+
+\NormalTok{sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{duplicated}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{sum}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Checking distinct IDs}
+\FunctionTok{n\_distinct}\NormalTok{(daily\_activity}\SpecialCharTok{$}\NormalTok{Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 33
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{n\_distinct}\NormalTok{(sleep\_day}\SpecialCharTok{$}\NormalTok{Id)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 24
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Make all columns lower case}
+\NormalTok{daily\_activity }\OtherTok{\textless{}{-}} \FunctionTok{rename\_with}\NormalTok{(daily\_activity, tolower)}
+\NormalTok{sleep\_day }\OtherTok{\textless{}{-}} \FunctionTok{rename\_with}\NormalTok{(sleep\_day,tolower)}
+
+\DocumentationTok{\#\# make all columns as date for ease of merge}
+\NormalTok{daily\_activity }\OtherTok{\textless{}{-}}\NormalTok{ daily\_activity }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{date =}\NormalTok{ activitydate)}
+\FunctionTok{head}\NormalTok{(daily\_activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 15
+##         id date  total~1 total~2 track~3 logge~4 verya~5 moder~6 light~7 seden~8
+##      <dbl> <chr>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+## 1   1.50e9 4/12~   13162    8.5     8.5        0    1.88   0.550    6.06       0
+## 2   1.50e9 4/13~   10735    6.97    6.97       0    1.57   0.690    4.71       0
+## 3   1.50e9 4/14~   10460    6.74    6.74       0    2.44   0.400    3.91       0
+## 4   1.50e9 4/15~    9762    6.28    6.28       0    2.14   1.26     2.83       0
+## 5   1.50e9 4/16~   12669    8.16    8.16       0    2.71   0.410    5.04       0
+## 6   1.50e9 4/17~    9705    6.48    6.48       0    3.19   0.780    2.51       0
+## # ... with 5 more variables: veryactiveminutes <dbl>,
+## #   fairlyactiveminutes <dbl>, lightlyactiveminutes <dbl>,
+## #   sedentaryminutes <dbl>, calories <dbl>, and abbreviated variable names
+## #   1: totalsteps, 2: totaldistance, 3: trackerdistance,
+## #   4: loggedactivitiesdistance, 5: veryactivedistance,
+## #   6: moderatelyactivedistance, 7: lightactivedistance,
+## #   8: sedentaryactivedistance
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sleep\_day }\OtherTok{\textless{}{-}}\NormalTok{ sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{date =}\NormalTok{ sleepday)}
+\FunctionTok{head}\NormalTok{(sleep\_day)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 5
+##           id date                  totalsleeprecords totalminutesasleep totalt~1
+##        <dbl> <chr>                             <dbl>              <dbl>    <dbl>
+## 1 1503960366 4/12/2016 12:00:00 AM                 1                327      346
+## 2 1503960366 4/13/2016 12:00:00 AM                 2                384      407
+## 3 1503960366 4/15/2016 12:00:00 AM                 1                412      442
+## 4 1503960366 4/16/2016 12:00:00 AM                 2                340      367
+## 5 1503960366 4/17/2016 12:00:00 AM                 1                700      712
+## 6 1503960366 4/19/2016 12:00:00 AM                 1                304      320
+## # ... with abbreviated variable name 1: totaltimeinbed
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_activity }\OtherTok{\textless{}{-}}\NormalTok{ daily\_activity }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{date =} \FunctionTok{as.Date}\NormalTok{(date, }\AttributeTok{format =} \StringTok{"\%m/\%d/\%Y"}\NormalTok{))}
+
+\NormalTok{sleep\_day }\OtherTok{\textless{}{-}}\NormalTok{ sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{date =} \FunctionTok{as.Date}\NormalTok{(date,}\AttributeTok{format =}\StringTok{"\%m/\%d/\%Y \%I:\%M:\%S \%p"}\NormalTok{ , }\AttributeTok{tz=}\FunctionTok{Sys.timezone}\NormalTok{()))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{analyzeshare}{%
+\subsubsection{Analyze/Share}\label{analyzeshare}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The below bar chart shows there is not a strong majority of light or
+  sedentary users as per the step activity level.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stepcategories }\OtherTok{\textless{}{-}}\NormalTok{ daily\_activity }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(id) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_step=} \FunctionTok{mean}\NormalTok{(totalsteps)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{ (}\AttributeTok{active\_type=}\FunctionTok{case\_when}\NormalTok{ (}
+\NormalTok{    avg\_step }\SpecialCharTok{\textless{}}\DecValTok{5000} \SpecialCharTok{\textasciitilde{}} \StringTok{"Sedentary"}\NormalTok{,}
+\NormalTok{    avg\_step }\SpecialCharTok{\textgreater{}=}\DecValTok{5000} \SpecialCharTok{\&}\NormalTok{ avg\_step}\SpecialCharTok{\textless{}} \DecValTok{8000} \SpecialCharTok{\textasciitilde{}}\StringTok{"Lightly Active"}\NormalTok{,}
+\NormalTok{    avg\_step}\SpecialCharTok{\textgreater{}=}\DecValTok{8000} \SpecialCharTok{\&}\NormalTok{ avg\_step }\SpecialCharTok{\textless{}}\DecValTok{12000}\SpecialCharTok{\textasciitilde{}}\StringTok{"Active"}\NormalTok{,}
+\NormalTok{    avg\_step }\SpecialCharTok{\textgreater{}=}\DecValTok{12000} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Highly Active\textquotesingle{}}\NormalTok{))}
+
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ stepcategories)}\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{active\_type,}\AttributeTok{fill=}\NormalTok{active\_type))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Categories Of Average Steps"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/StepsCategories-1.pdf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  The visuals show that more users are using their devices to track
+  steps than sleep. More than 25 users have high usage of the device for
+  tracking steps while only 9 of users have high usage of the device for
+  tracking sleep.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#step\_daily\_active}
+\NormalTok{step\_daily\_activity }\OtherTok{\textless{}{-}}\NormalTok{ daily\_activity }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(id) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{days\_step =} \FunctionTok{n\_distinct}\NormalTok{(date))}
+\FunctionTok{head}\NormalTok{(step\_daily\_activity)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##           id days_step
+##        <dbl>     <int>
+## 1 1503960366        31
+## 2 1624580081        31
+## 3 1644430081        30
+## 4 1844505072        31
+## 5 1927972279        31
+## 6 2022484408        31
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_step\_by\_category }\OtherTok{\textless{}{-}}\NormalTok{ step\_daily\_activity }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{device\_usage =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    days\_step }\SpecialCharTok{\textless{}=}\DecValTok{15} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Low Usage\textquotesingle{}}\NormalTok{,}
+\NormalTok{    days\_step }\SpecialCharTok{\textgreater{}}\DecValTok{15} \SpecialCharTok{\&}\NormalTok{ days\_step }\SpecialCharTok{\textless{}=} \DecValTok{25} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Normal Usage\textquotesingle{}}\NormalTok{,}
+\NormalTok{    days\_step }\SpecialCharTok{\textgreater{}}\DecValTok{25} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}High Usage\textquotesingle{}}\NormalTok{,}
+    \ConstantTok{TRUE}\SpecialCharTok{\textasciitilde{}}\StringTok{\textquotesingle{}Otherwise\textquotesingle{}}\NormalTok{))}
+
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ daily\_step\_by\_category)}\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ device\_usage, }\AttributeTok{fill=}\NormalTok{device\_usage))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Device Usage for Steps"}\NormalTok{)}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Usage\_sleep\_day}
+\NormalTok{usage\_sleep\_day }\OtherTok{\textless{}{-}}\NormalTok{ sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(id) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{days\_sleep =} \FunctionTok{n\_distinct}\NormalTok{(date))}
+\FunctionTok{head}\NormalTok{(usage\_sleep\_day)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##           id days_sleep
+##        <dbl>      <int>
+## 1 1503960366         25
+## 2 1644430081          4
+## 3 1844505072          3
+## 4 1927972279          5
+## 5 2026352035         28
+## 6 2320127002          1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{daily\_sleep\_by\_category }\OtherTok{\textless{}{-}}\NormalTok{ usage\_sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{device\_usage\_sleep =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    days\_sleep }\SpecialCharTok{\textless{}=}\DecValTok{15} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Low Usage\textquotesingle{}}\NormalTok{,}
+\NormalTok{    days\_sleep }\SpecialCharTok{\textgreater{}}\DecValTok{15} \SpecialCharTok{\&}\NormalTok{ days\_sleep }\SpecialCharTok{\textless{}=} \DecValTok{25} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Normal Usage\textquotesingle{}}\NormalTok{,}
+\NormalTok{    days\_sleep }\SpecialCharTok{\textgreater{}}\DecValTok{25} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}High Usage\textquotesingle{}}\NormalTok{,}
+    \ConstantTok{TRUE}\SpecialCharTok{\textasciitilde{}}\StringTok{\textquotesingle{}Otherwise\textquotesingle{}}\NormalTok{))}
+
+\NormalTok{q }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ daily\_sleep\_by\_category)}\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ device\_usage\_sleep, }\AttributeTok{fill=}\NormalTok{device\_usage\_sleep))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Device Usage for Sleep"}\NormalTok{)}
+\NormalTok{q}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  There is a positive correlation between steps and calories burned, but
+  the correlation is weaker when calories burned is correlated to total
+  active minutes in a day.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Total Steps and total calories burned}
+
+\NormalTok{a}\OtherTok{\textless{}{-}}\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ daily\_activity)}\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ totalsteps, }\AttributeTok{y =}\NormalTok{ calories),}\AttributeTok{color=}\StringTok{"blue"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ totalsteps, }\AttributeTok{y =}\NormalTok{ calories),}\AttributeTok{color=}\StringTok{"red"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Total Daily Steps vs Calories Burned"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Total Steps"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Calories Burned"}\NormalTok{)}
+\NormalTok{a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+\end{verbatim}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Total active minutes and total calories burned}
+
+\NormalTok{daily\_activity\_new }\OtherTok{\textless{}{-}}\NormalTok{daily\_activity }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{total\_active\_minutes=}\NormalTok{ veryactiveminutes}\SpecialCharTok{+}\NormalTok{fairlyactiveminutes}\SpecialCharTok{+}\NormalTok{lightlyactiveminutes)}
+
+\NormalTok{b}\OtherTok{\textless{}{-}}\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ daily\_activity\_new)}\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ total\_active\_minutes, }\AttributeTok{y =}\NormalTok{ calories),}\AttributeTok{color=}\StringTok{"purple"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ total\_active\_minutes, }\AttributeTok{y =}\NormalTok{ calories),}\AttributeTok{color=}\StringTok{"black"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Total Active Minutes vs Calories Burned"}\NormalTok{,}\AttributeTok{x=}\StringTok{"Total Active Minutes"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Calories Burned"}\NormalTok{)}
+
+\NormalTok{b}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+\end{verbatim}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/unnamed-chunk-3-2.pdf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  There are significant number of users who are getting below normal
+  sleep due to stress/other issues
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Below Normal Sleep Hours}
+
+\NormalTok{avg\_minutes\_asleep }\OtherTok{\textless{}{-}}\NormalTok{ sleep\_day }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(id) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{avg\_asleep =} \FunctionTok{mean}\NormalTok{(totalminutesasleep))}
+
+
+\NormalTok{avg\_minutes\_asleep1 }\OtherTok{\textless{}{-}}\NormalTok{ avg\_minutes\_asleep }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{sleep\_per\_day =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{    avg\_asleep }\SpecialCharTok{\textless{}=}\DecValTok{420} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Below Normal Sleep Hours\textquotesingle{}}\NormalTok{,}
+\NormalTok{    avg\_asleep }\SpecialCharTok{\textgreater{}}\DecValTok{421} \SpecialCharTok{\&}\NormalTok{ avg\_asleep }\SpecialCharTok{\textless{}=} \DecValTok{480} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Normal Sleep Hours\textquotesingle{}}\NormalTok{,}
+\NormalTok{    avg\_asleep }\SpecialCharTok{\textgreater{}}\DecValTok{480} \SpecialCharTok{\textasciitilde{}} \StringTok{\textquotesingle{}Above Normal Hours\textquotesingle{}}\NormalTok{,}
+    \ConstantTok{TRUE}\SpecialCharTok{\textasciitilde{}}\StringTok{\textquotesingle{}Otherwise\textquotesingle{}}\NormalTok{))}
+
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ avg\_minutes\_asleep1)}\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{mapping =} \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ sleep\_per\_day, }\AttributeTok{fill=}\NormalTok{sleep\_per\_day))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Bellabit_Rmarkdown_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\hypertarget{act}{%
+\subsubsection{Act}\label{act}}
+
+As per the results achieved, it is recommended to promote Bellabeat app
+with leaf\ldots{}
+
+\end{document}
