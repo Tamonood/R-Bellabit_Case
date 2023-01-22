@@ -148,7 +148,6 @@ q <- ggplot(data = daily_sleep_by_category)+
   labs(title = "Device Usage for Sleep")
 q
 
-##ggarrange(p,q)
 
 ```
 
@@ -174,7 +173,6 @@ b<-ggplot(data = daily_activity_new)+
 
 b
 
-##ggarrange(a,b)
 ```
 
 4. There are significant number of users who are getting below normal sleep due to stress/other issues
